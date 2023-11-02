@@ -24,26 +24,32 @@ public class HelloController {
 
     @FXML
     private Label welcomeText;
+    private ProfileController profileController;
 
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void setProfileController(ProfileController profileController) {
+        this.profileController = profileController;
     }
+
 
     @FXML
     protected void onAuthButtonClick() {
+        String username = UsernameField.getText();
+        String password = PasswordField.getText();
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simple/profile.fxml"));
             Parent root = loader.load();
 
             ProfileController profileController = loader.getController();
 
+            // Отправляем данные в ProfileController
+            profileController.processAuthData(username, password);
+
             Scene scene = new Scene(root);
 
             Stage currentStage = (Stage) authLoginButtom.getScene().getWindow();
 
-            // Установите новую сцену в текущем окне
+            // Устанавливаем новую сцену в текущем окне
             currentStage.setScene(scene);
             currentStage.show();
         } catch (IOException e) {
