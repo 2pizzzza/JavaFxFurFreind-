@@ -3,22 +3,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simple.ProfileController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: EF1234;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simple.ProfileController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label alignment="CENTER" contentDisplay="TOP" prefHeight="200.0" prefWidth="227.0" text="Profile" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_ELLIPSIS">
-        <font>
-            <Font name="Bodoni MT" size="32.0" />
-        </font>
-    </Label>
     <AnchorPane prefHeight="464.0" prefWidth="660.0" style="-fx-background-color: FAFAFA;">
         <children>
 
@@ -27,22 +20,22 @@
                     <Font name="Bodoni MT Black" size="11.0" />
                 </font>
             </Label>
-         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../media/icon.png" />
-            </image>
-         </ImageView>
-         <Text fx:id="Userame" layoutX="209.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="186.13671875">
+         <Text fx:id="Userame" layoutX="30.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="186.13671875">
             <font>
                <Font size="21.0" />
             </font>
          </Text>
-         <Text fx:id="Password" layoutX="209.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="186.13671875">
+         <Text fx:id="Password" layoutX="36.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="186.13671875">
             <font>
                <Font size="21.0" />
             </font>
          </Text>
          <Button fx:id="Logout" layoutX="54.0" layoutY="184.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+          <Label alignment="CENTER" contentDisplay="TOP" layoutX="216.0" layoutY="17.0" prefHeight="62.0" prefWidth="227.0" text="Profile" textAlignment="JUSTIFY" textFill="#fafafa" textOverrun="CENTER_ELLIPSIS">
+              <font>
+                  <Font name="Bodoni MT" size="32.0" />
+              </font>
+          </Label>
         </children>
     </AnchorPane>
 </VBox>

@@ -42,7 +42,6 @@ public class HelloController {
 
             ProfileController profileController = loader.getController();
 
-            // Отправляем данные в ProfileController
             profileController.processAuthData(username, password);
 
             Scene scene = new Scene(root);
